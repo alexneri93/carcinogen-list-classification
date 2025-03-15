@@ -65,7 +65,7 @@ const list = carcinogenListSearch( <SEARCH_OPTIONS> )
 ### Options
 | Name         | Type             | Default         | Description |
 | ------------- | ------------- |------------------|------------------|
-| groups     | array    | ["1", "2A", "2B", "3", "4"]  | Returns carcinogens belonging to the specified groups.  |
+| groups     | array    | ["1", "2A", "2B", "3", "4"]  | Returns carcinogens belonging to the specified groups. The groups are: `"1"`, `"2A"`, `"2B"`, `"3"`, `"4"`. |
 | sortBy    | string    | "group"| Sorts by the specified field. The possible fields are `"agent"`, `"group"`, `"volume"`, `"volumePublicationYear"`, `"evaluationYear"`, `"additionalInformation"`|
 | sortMethod    | string    | "asc"| How to sort the search, can be ascendant or descendant. Possible options are `"asc"` and `"desc"`.  |
 | keywords     | array      | [""] | Returns carcinogens that contains the specified keywords. If none are provided, it returns all.  |
