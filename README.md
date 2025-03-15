@@ -11,7 +11,7 @@ Carcinogens are clasified into 5 groups:
 | 2B            | Possibly carcinogenic to humans|
 | 3             | Carcinogenity not classifiable |
 | 4             | Probably not carcinogenic      |
-
+  
 The information provided by this list includes:
 
 * Agent
@@ -49,17 +49,17 @@ npm install carcinogen-list-classification
 The package can be imported in the code using `require` or `import`:
 
 ```typescript
-const { carcinogenList } = require('carcinogen-list-classification')
+const { carcinogenListSearch } = require('carcinogen-list-classification')
 ```
 
 ```typescript
-import { carcinogenList } from 'carcinogen-list-classification'
+import { carcinogenListSearch } from 'carcinogen-list-classification'
 ```
 
 To get the information run the following, where `<SEARCH_OPTIONS>` is a Javascript object that contains the configuration for the search:
 
 ```typescript
-const list = carcinogenList( <SEARCH_OPTIONS> )
+const list = carcinogenListSearch( <SEARCH_OPTIONS> )
 ```
 
 ### Options
@@ -73,14 +73,14 @@ const list = carcinogenList( <SEARCH_OPTIONS> )
 ### Examples
 ```typescript
 // Returns all the list
-carcinogenList({})
+carcinogenListSearch({})
 
 // Only carcinogens belonging to groups 3 and 4
-carcinogenList({ groups: ["3", "4"] })
+carcinogenListSearch({ groups: ["3", "4"] })
 
 // Only carcinogens containing the keyword "virus" belonging to group 1
-carcinogenList({ keywords: ["virus"], groups: ["1"] })
+carcinogenListSearch({ keywords: ["virus"], groups: ["1"] })
 
 // Sort the result by agent name in descending order and returns only carcinogens belonging to group 2A
-carcinogenList({ sortBy: "agent", sortMethod: "desc", groups: ["2A"] })
+carcinogenListSearch({ sortBy: "agent", sortMethod: "desc", groups: ["2A"] })
 ```

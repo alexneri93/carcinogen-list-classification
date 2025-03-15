@@ -2,12 +2,21 @@ const { describe, it } = require('node:test');
 const assert = require('node:assert');
 
 const { carcinogenListSearch } = require('../dist/index.js');
+const carcinogensFullList = require('../src/data/carcinogens_list_classification.json');
+// import carcinogensFullList from '../src/data/carcinogens_list_classification.json';
 
 describe('carcinogenListSearch', () => {
     it('should return an array ', () => {
         let options = {keywords: ["acid"]}
         let result = carcinogenListSearch(options)
         assert.strictEqual(typeof result, 'object');
+    });
+
+    it('should return an array ', () => {
+      let result = carcinogenListSearch({})
+      let arrayLength = result.length
+      let fullListLength = carcinogensFullList.filter(c => c.group !== "").length
+      assert.equal(arrayLength, fullListLength);
     });
 
     it('should return agents containing a keyword', () => {
