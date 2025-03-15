@@ -8,9 +8,9 @@ Carcinogens are clasified into 5 groups:
 | ------------- |------------------------------|
 | 1             | Carcinogenic to humans         |
 | 2A            | Probably carcinogenic to humans|
-| 2A            | Possibly carcinogenic to humans|
-| 2A            | Carcinogenity not classifiable |
-| 2A            | Probably not carcinogenic.     |
+| 2B            | Possibly carcinogenic to humans|
+| 3             | Carcinogenity not classifiable |
+| 4             | Probably not carcinogenic      |
 
 The information provided by this list includes:
 
@@ -26,12 +26,12 @@ Example of the returned data:
 ```typescript
 [
   {
-    "agent": "Perfluorooctanoic acid (PFOA)",
-    "group": "1",
-    "volume": "110, 135",
-    "volumePublicationYear": "2025 online",
-    "evaluationYear": "2023",
-    "additionalInformation": ""
+    agent: "Perfluorooctanoic acid (PFOA)",
+    group: "1",
+    volume: "110, 135",
+    volumePublicationYear: "2025 online",
+    evaluationYear: "2023",
+    additionalInformation: ""
   },
   ...
 ]
@@ -66,7 +66,7 @@ const list = carcinogenList( <SEARCH_OPTIONS> )
 | Name         | Type             | Default         | Description |
 | ------------- | ------------- |------------------|------------------|
 | groups     | array    | ["1", "2A", "2B", "3", "4"]  | Returns carcinogens belonging to the specified groups.  |
-| sortBy    | string    | "group"| Sorts by the specified field. The possible fields are `"agent"`, `"group"`, `"volume"`, `"publicationYear"`, `"evaluationYear"`, `"additionalInformation"`|
+| sortBy    | string    | "group"| Sorts by the specified field. The possible fields are `"agent"`, `"group"`, `"volume"`, `"volumePublicationYear"`, `"evaluationYear"`, `"additionalInformation"`|
 | sortMethod    | string    | "asc"| How to sort the search, can be ascendant or descendant. Possible options are `"asc"` and `"desc"`.  |
 | keywords     | array      | [] | Returns carcinogens that contains the specified keywords. If none are provided, it returns all.  |
 
