@@ -56,7 +56,7 @@ const { carcinogenList } = require('carcinogen-list-classification')
 import { carcinogenList } from 'carcinogen-list-classification'
 ```
 
-To get the information run the following, where `<SEARCH_OPTIONS>` is a Javascript object that contains the configuration of the search:
+To get the information run the following, where `<SEARCH_OPTIONS>` is a Javascript object that contains the configuration for the search:
 
 ```typescript
 const list = carcinogenList( <SEARCH_OPTIONS> )
