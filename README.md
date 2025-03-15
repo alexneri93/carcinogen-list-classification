@@ -73,7 +73,7 @@ const list = carcinogenList( <SEARCH_OPTIONS> )
 ### Examples
 ```typescript
 // Returns all the list
-carcinogenList()
+carcinogenList({})
 
 // Only carcinogens belonging to groups 3 and 4
 carcinogenList({ groups: ["3", "4"] })
