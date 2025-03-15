@@ -56,7 +56,7 @@ const { carcinogenList } = require('carcinogen-list-classification')
 import { carcinogenList } from 'carcinogen-list-classification'
 ```
 
-To get the information run the following, where `<SEARCH_OPTIONS>` is an optional Javascript object that contains the configuration of the search:
+To get the information run the following, where `<SEARCH_OPTIONS>` is a Javascript object that contains the configuration of the search:
 
 ```typescript
 const list = carcinogenList( <SEARCH_OPTIONS> )
@@ -68,7 +68,7 @@ const list = carcinogenList( <SEARCH_OPTIONS> )
 | groups     | array    | ["1", "2A", "2B", "3", "4"]  | Returns carcinogens belonging to the specified groups.  |
 | sortBy    | string    | "group"| Sorts by the specified field. The possible fields are `"agent"`, `"group"`, `"volume"`, `"volumePublicationYear"`, `"evaluationYear"`, `"additionalInformation"`|
 | sortMethod    | string    | "asc"| How to sort the search, can be ascendant or descendant. Possible options are `"asc"` and `"desc"`.  |
-| keywords     | array      | [] | Returns carcinogens that contains the specified keywords. If none are provided, it returns all.  |
+| keywords     | array      | [""] | Returns carcinogens that contains the specified keywords. If none are provided, it returns all.  |
 
 ### Examples
 ```typescript
