@@ -1,0 +1,28 @@
+{
+  "name": "carcinogen-list-classification",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "homepage": "https://github.com/alexneri93/carcinogen-list-classification",
+  "repository": {
+    "url": "https://github.com/alexneri93/carcinogen-list-classification"
+  },
+  "scripts": {
+    "build": "tsup",
+    "test": "node --test"
+  },
+  "keywords": [
+    "cancer",
+    "carcinogen",
+    "carcinogenic",
+    "classification list"
+  ],
+  "author": "Alejandro Neri Jimenez",
+  "license": "MIT",
+  "description": "Provides data about carcinogens and their classification according to the IARC Monographs.",
+  "devDependencies": {
+    "tsup": "^8.4.0",
+    "typescript": "^5.8.2"
+  }
+}
